@@ -6,7 +6,12 @@ var eventSchema = new Schema({
   description: String,
   startdate: Date,
   enddate: Date,
-  time: Number
+  time: Number,
+  user: {
+    type: Schema.Type.ObjectId, 
+    ref: 'user'
+  },
+  
 });
 
 mongoose.model('events', eventSchema);
