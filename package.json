@@ -1,0 +1,25 @@
+{
+  "name": "mean-stack",
+  "version": "1.0.0",
+  "description": "An application that uses MEAN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-ofamakinde/mean-stack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-ofamakinde/mean-stack/issues"
+  },
+  "homepage": "https://github.com/andela-ofamakinde/mean-stack#readme",
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "express": "^4.12.3",
+    "method-override": "^2.3.2",
+    "mongoose": "^4.0.2"
+  }
+}
