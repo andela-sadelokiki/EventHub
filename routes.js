@@ -1,6 +1,9 @@
-module.exports =function(app){
-  var controller = require('./controller/controller');
-  app.post('/createnew', controller.creater);
-  app.get('/viewuser', controller.finder);
-  app.delete('/deleteuser', controller.remover);
+module.exports = function(app) {
+
+  var userCtrl = require('./controller/user.controller');
+
+  app.post('/signUp', userCtrl.createUser);
+  app.get('/viewUser', userCtrl.findUser);
+  app.delete('/deleteUser', userCtrl.deleteUser);
+
 }
