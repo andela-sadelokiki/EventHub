@@ -11,9 +11,10 @@ module.exports = function(app) {
   // EVENT ROUTES
   app.post('/createEvent', eventCtrl.createEvent);
   app.get('/getAllEvents', eventCtrl.getAllEvents);
-  
+
   app.get('/getEvent/:event_id', eventCtrl.getOneEvent);
   app.put('/editEvent/:event_id', eventCtrl.updateEvent);
+  app.post('/joinEvent/:event_id', eventCtrl.joinEvent);
   app.delete('/deleteEvent/:event_id', eventCtrl.deleteEvent);
 
 }

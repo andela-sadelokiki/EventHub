@@ -48,6 +48,21 @@ exports.updateEvent = function(req, res) {
 
 };
 
+exports.joinEvent = function(req, res) {
+  Event.findById(req.params.event_id, function(err, event) {
+    if (err) {
+      res.send(err);
+    }
+    event.joinedUsers.push(req.body.userId);
+    event.save(function(err){
+      if (err){
+        res.send(err);
+      }
+      res.json({message : 'Succesfully joined event'});
+    });
+  });
+};
+
 exports.deleteEvent = function(req, res) {
   Event.remove({ _id : req.params.event_id}, function(err, event){
     if(err) {
