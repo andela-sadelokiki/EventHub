@@ -7,7 +7,6 @@ module.exports = function(app) {
   app.get('/getAllUsers', userCtrl.getAllUser);
   app.delete('/deleteUser', userCtrl.deleteUser);
 
-
   // EVENT ROUTES
   app.post('/createEvent', eventCtrl.createEvent);
   app.get('/getAllEvents', eventCtrl.getAllEvents);
@@ -17,4 +16,4 @@ module.exports = function(app) {
   app.post('/joinEvent/:event_id', eventCtrl.joinEvent);
   app.delete('/deleteEvent/:event_id', eventCtrl.deleteEvent);
 
-}
+};

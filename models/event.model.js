@@ -24,7 +24,8 @@ var eventSchema = new Schema({
   },
   userId: {
     type: Schema.ObjectId, 
-    ref: 'user'
+    ref: 'user',
+    required : 'Please enter the user ID'
   },
   joinedUsers: [{
     type: Schema.ObjectId,
