@@ -23,5 +23,18 @@ describe('Event model test', function() {
       });
     });
 
+    it('should save the event', function(done){
+      myEvent.title = 'Offsite Event';
+      myEvent.description = 'Time to have fun';
+      myEvent.startdate = Date.now();
+      myEvent.enddate = Date.now();
+      myEvent.categories = 'party';
+
+      myEvent.save(function(error){
+        expect(error).toBeNull();
+        done();
+      });
+    });
+
   });
 });
