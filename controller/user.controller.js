@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
+
 require('../models/user.model');
 var User = mongoose.model('user');
 
-exports.creater = function(req, res){
-  console.log(req.body)
+exports.createUser = function(req, res){
+  console.log(req.body);
   User.create(req.body, function(err, user){
     if(err){
       res.send(err)
@@ -12,7 +13,7 @@ exports.creater = function(req, res){
   });
 };
 
-exports.finder = function(req, res){
+exports.getAllUser = function(req, res){
   User.find(function(err, user){
     if (err){
       return res.send(err)
@@ -21,7 +22,7 @@ exports.finder = function(req, res){
   });
 };
 
-exports.remover = function(req, res){
+exports.deleteUser = function(req, res){
   User.remove({
        _id : req.params.user_id
       },
