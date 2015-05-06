@@ -22,6 +22,16 @@ describe('Users model test', function() {
         done();
       });
     });
+    it('should save User to database', function(done){
+      User.firstname = 'toyosi';
+      User.lastname = 'famakinde';
+      User.email = 'me@gmail.com';
+      User.password = 'sugar';
+      User.save(function(error){
+        expect(error).toBeNull();
+        done();
+      });
+    });
 
   });
 });
