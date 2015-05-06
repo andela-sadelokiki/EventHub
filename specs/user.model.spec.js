@@ -22,7 +22,7 @@ describe('Users model test', function() {
         done();
       });
     });
-    it('should save event to database', function(done){
+    it('should save User to database', function(done){
       User.firstname = 'toyosi';
       User.lastname = 'famakinde';
       User.email = 'me@gmail.com';
