@@ -8,12 +8,7 @@ var user = mongoose.model('user');
 describe('Users model test', function() {
 
   beforeEach(function(done) {
-    User = new user({
-    firstname : 'olatoyosi',
-    lastname : 'famakinde',
-    email : 'email',
-    password : 'sugar'
-    });
+    User = new user();
      done();
   });
 
