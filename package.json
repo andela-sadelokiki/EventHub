@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/andela-ofamakinde/mean-stack.git"
   },
+  "scripts" :{
+    "start" : "nodemon server.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {

@@ -16,5 +16,4 @@ module.exports = function(app) {
   app.put('/editEvent/:event_id', eventCtrl.updateEvent);
   app.post('/joinEvent/:event_id', eventCtrl.joinEvent);
   app.delete('/deleteEvent/:event_id', eventCtrl.deleteEvent);
-
-}
+};

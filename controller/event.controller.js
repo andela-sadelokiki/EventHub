@@ -5,18 +5,18 @@ var Event = mongoose.model('events');
 exports.createEvent = function(req, res){
   Event.create(req.body, function(err, events){
     if (err){
-      res.send(err)
+      res.send(err);
     }
-    res.json(events);
+    res.json({success: 'Event Created'});
   });
 };
 
 exports.getAllEvents = function(req, res){
   Event.find(function(err, events){
     if (err){
-      res.send(err)
+      res.send(err);
     }
-    res.json(events);
+    res.json({success : 'All events are here'});
   });
 };
 
@@ -25,7 +25,7 @@ exports.getOneEvent = function(req, res) {
     if (err){
       res.send(err);
     }
-      res.json(event);
+      res.json({success : 'This is the single event'});
   });
 };
 
